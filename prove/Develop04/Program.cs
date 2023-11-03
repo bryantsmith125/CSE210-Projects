@@ -13,6 +13,7 @@ class Program
             {
                 "Menu Options:",
                 "1. Start breathing activity",
+                "2. Start reflecting activity",
                 "4. Quit",
                 "Select a choice from the menu:  "
 
@@ -39,6 +40,18 @@ class Program
                     breathing.Breathing(seconds);
                     breathing.GetDone();
                     break;
+
+                case 2:
+                    Console.Clear();
+                    ReflectingActivity reflecting = new ReflectingActivity("Reflecting", 0);
+                    reflecting.GetActivityName();
+                    reflecting.GetActivityDescription();
+                    seconds = reflecting.GetActivityTime();
+                    reflecting.GetReady();
+                    reflecting.ShowPrompt(seconds);
+                    reflecting.GetDone();
+                    break;
+                    
                 case 4:
                     Console.WriteLine("\nThank you for using the Mindfulness Program!\n");
                     break;
