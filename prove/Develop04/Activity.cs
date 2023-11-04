@@ -80,7 +80,4 @@ public void CountDown(int time)
         Console.Clear();
     }
 
-
-
-
 }
