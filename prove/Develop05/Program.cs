@@ -45,6 +45,19 @@ class Program
                                 goals.AddGoal(simpleGoal);
                                 goalInput = 4;
                                 break;
+                            case 2:
+                                Console.Write("What is the name of your goal?  ");
+                                name = Console.ReadLine();
+                                name = textInfo.ToTitleCase(name);
+                                Console.Write("What is a short description of your goal?  ");
+                                description = Console.ReadLine();
+                                description = textInfo.ToTitleCase(description);
+                                Console.Write("What is the amount of points associated with this goal?  ");
+                                points = int.Parse(Console.ReadLine());
+                                EternalGoal eternalGoal = new EternalGoal("Eternal Goal:", name, description, points);
+                                goals.AddGoal(eternalGoal);
+                                goalInput = 4;
+                                break;
                             default:
                                 Console.WriteLine($"\nSorry the option you entered is not valid.");
                                 break;

@@ -5,6 +5,7 @@ public class GoalMenu
     private string _menu = $@"
 The Types of Goals are:
     1. Simple Goal
+    2. Eternal Goal
 Which type of goal would you like to create?  ";
 
     public string _goalInput;
