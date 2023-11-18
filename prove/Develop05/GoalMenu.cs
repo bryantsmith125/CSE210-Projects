@@ -6,6 +6,8 @@ public class GoalMenu
 The Types of Goals are:
     1. Simple Goal
     2. Eternal Goal
+    3. Checklist Goal
+    4. Back to Main Menu
 Which type of goal would you like to create?  ";
 
     public string _goalInput;

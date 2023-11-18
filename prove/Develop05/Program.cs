@@ -58,14 +58,50 @@ class Program
                                 goals.AddGoal(eternalGoal);
                                 goalInput = 4;
                                 break;
+                            case 3:
+                                Console.Write("What is the name of your goal?  ");
+                                name = Console.ReadLine();
+                                name = textInfo.ToTitleCase(name);
+                                Console.Write("What is a short description of your goal?  ");
+                                description = Console.ReadLine();
+                                description = textInfo.ToTitleCase(description);
+                                Console.Write("What is the amount of points associated with this goal?  ");
+                                points = int.Parse(Console.ReadLine());
+                                Console.Write("How many times does this goal need to be accomplished for a bonus?  ");
+                                int numberTimes = int.Parse(Console.ReadLine());
+                                Console.Write("What is the bonus for accomplishing it that many times?  ");
+                                int bonusPoints = int.Parse(Console.ReadLine());
+                                ChecklistGoal checklistGoal = new ChecklistGoal("Check List Goal:", name, description, points, numberTimes, bonusPoints);
+                                goals.AddGoal(checklistGoal);
+                                goalInput = 4;
+                                break;
                             default:
-                                Console.WriteLine($"\nSorry the option you entered is not valid.");
+                                Console.WriteLine($"\nInvalid Response.");
                                 break;
                         }
                     }
                     break;
+                case 2:
+                    goals.ListGoals();
+                    Console.Write($"\nYou have {goals.GetTotalPoints()} points.\n");
+                    break;
+                case 3:
+                    goals.SaveGoals();
+                    break;
+                case 4:
+                    Console.Clear();
+                    goals.LoadGoals();
+                    break;
+                case 5:
+                    Console.Clear();
+                    Console.Write($"\nYou currently have {goals.GetTotalPoints()} points.\n");
+                    goals.RecordGoalEvent();
+                    break;
+                case 6:
+                    Console.WriteLine("\nThank you for using the Eternal Quest Program!\n");
+                    break;
                 default:
-                    Console.WriteLine($"\nSorry the option you entered is not valid.");
+                    Console.WriteLine($"\nInvalid Response..");
                     break;
             }
         }

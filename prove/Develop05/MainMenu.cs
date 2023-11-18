@@ -6,6 +6,10 @@ public class MainMenu
     {
         Console.WriteLine("\nMain Menu:");
         Console.WriteLine("1. Create new goal");
+        Console.WriteLine("2. List goals");
+        Console.WriteLine("3. Save goals");
+        Console.WriteLine("4. Load goals");
+        Console.WriteLine("5. Record event");
         Console.WriteLine("6. Quit");
 
         int choice;
