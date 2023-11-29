@@ -47,6 +47,38 @@ class Program
         comment12._name = "Thor of Asguard";
         comment12._commentText = "I am still the strongest Avenger!";
 
+        Video video1 = new Video();
+        video1._title = "I am Ironman";
+        video1._author = "Tony Stark";
+        video1._videoLength = 42;
+        video1._comments.Add(comment1);
+        video1._comments.Add(comment2);
+        video1._comments.Add(comment3);
+        video1._comments.Add(comment4);
+        
+
+        Video video2 = new Video();
+        video2._title = "Wakanda Forever";
+        video2._author = "T'Challa Udaku";
+        video2._videoLength = 37;
+        video2._comments.Add(comment5);
+        video2._comments.Add(comment6);
+        video2._comments.Add(comment7);
+        
+
+        Video video3 = new Video();
+        video3._title = "Hulk Smash";
+        video3._author = "Dr. Bruce Banner";
+        video3._videoLength = 112;
+        video3._comments.Add(comment8);
+        video3._comments.Add(comment9);
+        video3._comments.Add(comment10);
+        video3._comments.Add(comment11);
+        video3._comments.Add(comment12);
+
+        video1.DisplayVideoDetails();
+        video2.DisplayVideoDetails();
+        video3.DisplayVideoDetails();
 
     }
 }
